@@ -52,9 +52,12 @@ const Navbar = ({ activeSection }: NavbarProps) => {
           <div className="flex items-center justify-between h-16">
             {/* Logo */}
             <div className="flex items-center space-x-2 font-bold text-xl">
-              <Code className="h-8 w-8 text-primary" />
+              {/* <Code className="h-8 w-8 text-primary" /> */}
+              {/* <span className="text-muted-foreground ">{"<"}</span> */}
+              <span className="text-primary  font-code text-2xl">{"<"}</span>
               <span className="font-code text-primary">Jagat</span>
               <span className="text-foreground">Joshi</span>
+              <span className="text-primary font-code text-2xl ">{"/>"}</span>
             </div>
 
             {/* Desktop Navigation */}
@@ -69,10 +72,12 @@ const Navbar = ({ activeSection }: NavbarProps) => {
                       : "text-muted-foreground"
                   }`}
                 >
+                  <span className=" font-code text-lg">{"<"}</span>
                   {item.label}
                   {activeSection === item.href.slice(1) && (
                     <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-primary rounded-full" />
                   )}
+                  <span className="font-code  ">{"/>"}</span>
                 </button>
               ))}
             </div>
