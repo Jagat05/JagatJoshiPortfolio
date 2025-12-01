@@ -1,33 +1,32 @@
-
-import { Github, Linkedin, Mail, ArrowUp } from 'lucide-react';
-import { Button } from '@/components/ui/button';
+import { Github, Linkedin, Mail, ArrowUp } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   const socialLinks = [
     {
-      name: 'GitHub',
+      name: "GitHub",
       icon: Github,
-      href: 'https://github.com',
-      color: 'hover:text-gray-400'
+      href: "https://github.com",
+      color: "hover:text-gray-400",
     },
     {
-      name: 'LinkedIn',
+      name: "LinkedIn",
       icon: Linkedin,
-      href: 'https://linkedin.com',
-      color: 'hover:text-blue-400'
+      href: "https://linkedin.com",
+      color: "hover:text-blue-400",
     },
     {
-      name: 'Email',
+      name: "Email",
       icon: Mail,
-      href: 'mailto:jagat.joshi@example.com',
-      color: 'hover:text-red-400'
-    }
+      href: "mailto:jagat.joshi@example.com",
+      color: "hover:text-red-400",
+    },
   ];
 
   return (
@@ -37,7 +36,9 @@ const Footer = () => {
           {/* Brand */}
           <div className="text-center md:text-left">
             <div className="flex items-center justify-center md:justify-start space-x-2 mb-4">
-              <span className="font-code text-2xl font-bold text-primary">Jagat</span>
+              <span className="font-code text-2xl font-bold text-primary">
+                Jagat
+              </span>
               <span className="text-2xl font-bold">Joshi</span>
             </div>
             <p className="text-muted-foreground">
@@ -78,12 +79,7 @@ const Footer = () => {
         {/* Divider */}
         <div className="border-t border-border mt-8 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center text-sm text-muted-foreground">
-            <p>
-              © {currentYear} Jagat Joshi. All rights reserved.
-            </p>
-            <p className="mt-2 md:mt-0">
-              Built with ❤️ using React & TypeScript
-            </p>
+            <p>© {currentYear} Jagat Joshi. All rights reserved.</p>
           </div>
         </div>
 
