@@ -1,4 +1,11 @@
-import { ChevronDown, Github, Linkedin, Mail, Download } from "lucide-react";
+import {
+  ChevronDown,
+  Github,
+  Linkedin,
+  Mail,
+  Download,
+  Facebook,
+} from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useState, useEffect } from "react";
 
@@ -10,9 +17,10 @@ const Hero = () => {
   const scrollToContact = () => {
     document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" });
   };
+
   const [displayedText, setDisplayedText] = useState("");
   const fullText =
-    "A Developer in Progress, Evolving with Every Line of Code. From Frontend Finesse to Backend Power.";
+    "A Developer in Progress, Evolving with Every Line of Code. From Frontend Fine to Backend Power.";
 
   useEffect(() => {
     let currentIndex = 0;
@@ -32,10 +40,10 @@ const Hero = () => {
       id="home"
       className="min-h-screen flex items-center justify-center relative overflow-hidden"
     >
-      {/* Background Pattern */}
-      <div className="absolute inset-0 opacity-5">
+      {/* Background Pattern (FIX ADDED) */}
+      <div className="absolute inset-0 opacity-5 pointer-events-none">
         <div
-          className="absolute inset-0"
+          className="absolute inset-0 pointer-events-none"
           style={{
             backgroundImage:
               "url(\"data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E\")",
@@ -46,22 +54,38 @@ const Hero = () => {
       {/* Floating Code Elements */}
       <div className="absolute inset-5 overflow-hidden pointer-events-none">
         <div className="absolute top-20 left-10 animate-pulse">
-          <span className="font-code text-primary/30 text-sm">&lt;dev&gt;</span>
+          <span className="font-code text-terminal-green opacity-30 text-sm">
+            &lt;dev&gt;
+          </span>
         </div>
-        <div className="absolute top-40 right-20 animate-pulse delay-1000">
-          <span className="font-code text-primary/30 text-sm">
+        <div
+          className="absolute top-9 right-20 animate-float  delay-2000"
+          style={{ animationDelay: "2s" }}
+        >
+          <span className="font-code opacity-30 text-terminal-green text-sm  ">
             console.log(&quot;Hello World !&quot;);
           </span>
         </div>
+
         <div className="absolute bottom-40 left-20 animate-pulse delay-2000">
-          <span className="font-code text-primary/30 text-sm">
+          <span className="font-code opacity-30 text-terminal-green text-sm">
             &lt;/dev&gt;
           </span>
         </div>
-        <div className="absolute bottom-20 right-10 animate-pulse delay-500">
-          <span className="font-code text-primary/30 text-sm">
+        <div
+          className="absolute bottom-20 right-10 animate-float delay-500"
+          style={{ animationDelay: "2s" }}
+        >
+          <span className="font-code opacity-30 text-terminal-green text-sm">
             &#123; &quot;creativity&quot;: true &#125;
           </span>
+        </div>
+
+        <div
+          className="absolute bottom-40 right-20 font-mono text-xs text-terminal-pink opacity-30 animate-float"
+          style={{ animationDelay: "2s" }}
+        >
+          {"npm install creativity"}
         </div>
       </div>
 
@@ -69,17 +93,15 @@ const Hero = () => {
         <div className="w-full max-w-8xl mx-auto px-2 sm:px-6 lg:px-8 z-10 grid grid-cols-1 lg:grid-cols-2 gap-15 items-center">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div className="text-center animate-fade-in">
-              {/* Greeting */}
               <div className="mt-12 mb-2">
                 <span className="inline-block px-4 py-2 bg-primary/10 border border-primary/20 rounded-full text-primary font-medium mb-4">
                   👋 Hello , I&apos;m
                 </span>
               </div>
 
-              {/* Main Title */}
               <h1 className="text-3xl sm:text-6xl lg:text-6xl font-bold mb-6">
                 <span className="text-foreground">{"<"}Jagat</span>{" "}
-                <span className="text-primary bg-gradient-to-r from-primary to-blue-400 bg-clip-text text-transparent">
+                <span className="bg-gradient-to-r from-primary to-blue-400 bg-clip-text text-transparent">
                   Joshi {"/>"}
                 </span>
               </h1>
@@ -87,14 +109,11 @@ const Hero = () => {
               <div className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-2xl font-mono">
                 <span className="text-terminal-green">{">> "}</span>
                 {displayedText}
-                {/* <span className="animate-blink">|</span> */}
-                <span className="text-primary animate-blink animate-pulse font-bold">
-                  |
-                </span>
+                <span className="text-primary animate-blink  font-bold">|</span>
               </div>
             </div>
           </div>
-          {/* Terminal window */}
+
           <div className="flex flex-col mt-14 justify-center items-center">
             <div className="flex-1 flex justify-center lg:justify-end animate-fade-in mb-8">
               <div className="terminal-window w-full max-w-md inline-block ">
@@ -149,9 +168,7 @@ const Hero = () => {
               </div>
             </div>
 
-            {/* Terminal-style badge */}
-
-            <div className="inline-block mb-6 terminal-window">
+            <div className="inline-block mb-6 terminal-window animate-fade-in">
               <div className="terminal-header">
                 <div className="terminal-dot bg-red-500"></div>
                 <div className="terminal-dot bg-yellow-500"></div>
@@ -164,7 +181,6 @@ const Hero = () => {
                 <span className="code-text text-terminal-green">
                   $ console.log
                 </span>
-                {/* <span className="code-text text-foreground ml-2"> */}
                 <span className="code-text text-muted-foreground ml-2">
                   ("Available for Opportunities");
                 </span>
@@ -172,8 +188,8 @@ const Hero = () => {
             </div>
           </div>
         </div>
-        {/* CTA Buttons */}
-        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
+
+        <div className="flex flex-col mt-5 sm:flex-row gap-4 justify-center items-center mb-12">
           <Button
             onClick={scrollToProjects}
             size="lg"
@@ -182,6 +198,7 @@ const Hero = () => {
             View My Work
             <ChevronDown className="ml-2 h-5 w-5" />
           </Button>
+
           <Button
             onClick={scrollToContact}
             variant="outline"
@@ -193,8 +210,7 @@ const Hero = () => {
           </Button>
         </div>
 
-        {/* Social Links */}
-        <div className="flex justify-center space-x-6">
+        <div className="flex justify-center  space-x-6">
           <a
             href="https://github.com/Jagat05"
             target="_blank"
@@ -204,6 +220,7 @@ const Hero = () => {
           >
             <Github className="h-6 w-6" />
           </a>
+
           <a
             href="https://www.linkedin.com/in/jagat-joshi-aa5b85221/"
             target="_blank"
@@ -214,12 +231,23 @@ const Hero = () => {
             <Linkedin className="h-6 w-6" />
           </a>
           <a
-            href="mailto:your.joshijagaths@gmail.com"
+            href="https://www.facebook.com/jagat.joshi.599334"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="p-3 bg-secondary hover:bg-primary hover:text-primary-foreground rounded-full transition-all duration-300 hover:scale-110"
+            aria-label="Facebook"
+          >
+            <Facebook className="h-6 w-6" />
+          </a>
+
+          {/* <a
+            href="mailto:joshijagaths@gmail.com"
             className="p-3 bg-secondary hover:bg-primary hover:text-primary-foreground rounded-full transition-all duration-300 hover:scale-110"
             aria-label="Email"
           >
             <Mail className="h-6 w-6" />
-          </a>
+          </a> */}
+
           <a
             href="/resume.pdf"
             target="_blank"
@@ -231,9 +259,12 @@ const Hero = () => {
           </a>
         </div>
       </div>
-      {/* Scroll Indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-        <ChevronDown className="h-6 w-6 text-muted-foreground" />
+
+      <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
+        <div className="flex flex-col w-8 h-12 rounded-full border-2 border-primary/50 items-center justify-center">
+          <div className="w-1 h-6 bg-primary rounded-full mt-2"></div>
+          <ChevronDown className="h-6 w-6 text-primary " />
+        </div>
       </div>
     </section>
   );
