@@ -1,4 +1,4 @@
-import { Github, Linkedin, Mail, ArrowUp } from "lucide-react";
+import { Github, Linkedin, Mail, ArrowUp, Facebook } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const Footer = () => {
@@ -12,23 +12,22 @@ const Footer = () => {
     {
       name: "GitHub",
       icon: Github,
-      href: "https://github.com",
+      href: "https://github.com/Jagat05",
       color: "hover:text-gray-400",
     },
     {
       name: "LinkedIn",
       icon: Linkedin,
-      href: "https://linkedin.com",
+      href: "https://www.linkedin.com/in/jagat-joshi-aa5b85221/",
       color: "hover:text-blue-400",
     },
     {
-      name: "Email",
-      icon: Mail,
-      href: "mailto:jagat.joshi@example.com",
+      name: "Facebook",
+      icon: Facebook,
+      href: "https://www.facebook.com/jagat.joshi.599334",
       color: "hover:text-red-400",
     },
   ];
-
   return (
     <footer className="bg-card border-t border-border">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">

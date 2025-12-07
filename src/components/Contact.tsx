@@ -50,20 +50,20 @@ const Contact = () => {
     {
       icon: Mail,
       label: "Email",
-      value: "jagat.joshi@example.com",
-      href: "mailto:jagat.joshi@example.com",
+      value: "joshijagaths@gmail.com",
+      href: "mailto:joshijagaths@gmail.com",
     },
     {
       icon: Phone,
       label: "Phone",
-      value: "+977 98XXXXXXXX",
-      href: "tel:+97798XXXXXXXX",
+      value: "+977 9865444011",
+      href: "tel:+9779865444011",
     },
     {
       icon: MapPin,
       label: "Location",
       value: "Dhangadhi, Nepal",
-      href: "#",
+      href: "https://www.google.com/maps/place/Santoshi+Tol,+Dhangadhi+10900/@28.6982101,80.5762195,15z/data=!3m1!4b1!4m6!3m5!1s0x39a1ecdf11641477:0xb505804214de775b!8m2!3d28.6967859!4d80.5799505!16s%2Fg%2F1tlqnd8w?entry=ttu&g_ep=EgoyMDI1MTIwMi4wIKXMDSoASAFQAw%3D%3D",
     },
   ];
 
