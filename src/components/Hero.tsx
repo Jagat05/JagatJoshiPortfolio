@@ -90,7 +90,7 @@ const Hero = () => {
       </div>
 
       <div>
-        <div className="w-full max-w-8xl mx-auto px-2 sm:px-6 lg:px-8 z-10 grid grid-cols-1 lg:grid-cols-2 gap-15 items-center">
+        <div className="w-full mt-4 max-w-8xl mx-auto px-2 sm:px-6 lg:px-8 z-10 grid grid-cols-1 lg:grid-cols-2 gap-15 items-center">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div className="text-center animate-fade-in">
               <div className="mt-12 mb-2">
@@ -107,7 +107,7 @@ const Hero = () => {
               </h1>
 
               <div className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-2xl font-mono">
-                <span className="text-terminal-green">{">> "}</span>
+                <span className="text-terminal-green">{"-> "}</span>
                 {displayedText}
                 <span className="text-primary animate-blink  font-bold">|</span>
               </div>
