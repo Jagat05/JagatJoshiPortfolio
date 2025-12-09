@@ -17,22 +17,26 @@ const About = () => {
     {
       name: "Backend",
       icon: Database,
-      items: ["Node.js", "Express.js", "PHP", "MySQL"],
+      items: ["Node.js/Express.js", "MongoDB", "PHP", "MySQL"],
     },
     {
       name: "Programming",
       icon: Code2,
-      items: ["JavaScript", "Java", "C++", "Core C"],
+      items: ["JavaScript", "Java", "C++", "Core C", "PHP"],
     },
     {
       name: "Design",
       icon: Palette,
-      items: ["Graphic Design", "UI/UX", "WordPress", "CMS"],
+      items: ["Graphic Design", "Canva", "WordPress", "CMS"],
     },
   ];
 
   const interests = [
-    { name: "Reading", icon: BookOpen, description: "Books & Novels" },
+    {
+      name: "Teaching & Reading",
+      icon: BookOpen,
+      description: "Love teaching others  & exploring books and novels.",
+    },
     { name: "Fitness", icon: Coffee, description: "Exercise & Health" },
   ];
 
@@ -41,11 +45,14 @@ const About = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">
-            About <span className="text-primary">Me</span>
+            <span className="text-foreground">{"<"}About</span>{" "}
+            <span className="bg-gradient-to-r from-primary to-blue-400 bg-clip-text text-transparent">
+              Me {"/>"}
+            </span>
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            A curious mind who believes learning never stops. A passionate
-            developer recently completed B.Sc.CSIT from Kailali Multiple Campus.
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto font-mono">
+            <span className="text-terminal-green">{"-> "}</span>A curious mind
+            who believes learning never stops.
           </p>
         </div>
 
@@ -54,23 +61,25 @@ const About = () => {
           <div className="space-y-6 animate-fade-in">
             <div className="bg-card border border-border rounded-2xl p-8">
               <h3 className="text-2xl font-bold mb-6 text-primary">
-                My Journey
+                <span className="text-foreground">{"<"} My </span>
+                <span className="bg-gradient-to-r from-primary to-blue-400 bg-clip-text text-transparent">
+                  Journey{"/>"}
+                </span>
               </h3>
-              <div className="space-y-4 text-muted-foreground leading-relaxed">
+              <div className="space-y-4 font-mono text-muted-foreground leading-relaxed text-justify">
                 <p>
+                  <span className="text-terminal-green">{"-> "}</span>
                   Hello! I'm{" "}
                   <span className="text-primary font-semibold">
                     Jagat Joshi
                   </span>
-                  , a creative and curious mind currently in my final year of
-                  B.Sc. in Computer Science and Information Technology at
-                  Kailali Multiple Campus.
+                  , a creative and curious mind recently completed B.Sc. in
+                  Computer Science and Information Technology at Kailali
+                  Multiple Campus.
                 </p>
                 <p>
                   I have a passion for web development, with experience in{" "}
-                  <span className="text-primary font-semibold">
-                    HTML, CSS, JavaScript, PHP, and MySQL
-                  </span>
+                  <span className="text-primary font-semibold">MERN Stack</span>
                   , building responsive and dynamic web applications and{" "}
                   <span className="text-primary font-semibold">
                     CMS Like WordPress
@@ -78,15 +87,13 @@ const About = () => {
                   .
                 </p>
                 <p>
-                  Additionally, I am expanding my understanding of the{" "}
-                  <span className="text-primary font-semibold">MERN stack</span>{" "}
-                  (MongoDB, Express.js, React, and Node.js) and I am actively
-                  expanding my knowledge to become a full-stack developer.
-                </p>
-                <p>
+                  I am actively expanding my knowledge to become a{" "}
+                  <span className="text-primary font-semibold">
+                    full-stack developer.{" "}
+                  </span>
                   Beyond web development, I have a knack for{" "}
                   <span className="text-primary font-semibold">
-                    graphic design
+                    graphic design{" "}
                   </span>
                   , where I create impactful logos, pamphlets, visiting cards
                   and many more.
@@ -97,8 +104,11 @@ const About = () => {
 
           {/* Skills Grid */}
           <div className="space-y-6">
-            <h3 className="text-2xl font-bold text-center lg:text-left">
-              Technical <span className="text-primary">Skills</span>
+            <h3 className="text-2xl  font-bold text-center lg:text-center">
+              <span className="text-foreground">{"<"} Technical</span>{" "}
+              <span className="bg-gradient-to-r from-primary to-blue-400 bg-clip-text text-transparent">
+                Skills {"/>"}
+              </span>
             </h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               {skills.map((skill, index) => (
@@ -129,10 +139,13 @@ const About = () => {
 
         {/* Personal Interests */}
         <div className="text-center">
-          <h3 className="text-2xl font-bold mb-8">
-            Beyond <span className="text-primary">Code</span>
+          <h3 className="text-2xl font-mono font-bold mb-8">
+            <span className="text-foreground">{"<"} Beyond</span>{" "}
+            <span className="bg-gradient-to-r from-primary to-blue-400 bg-clip-text text-transparent">
+              Code {"/>"}
+            </span>
           </h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-4xl mx-auto">
+          <div className=" font-mono grid grid-cols-1  md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-4xl mx-auto">
             {interests.map((interest, index) => (
               <div
                 key={interest.name}
@@ -145,12 +158,12 @@ const About = () => {
                 </p>
               </div>
             ))}
-            <div className="bg-card border border-border rounded-xl p-6 hover:border-primary/50 transition-all duration-300 hover:scale-105 group">
+            <div className="bg-card border font-mono border-border rounded-xl p-6 hover:border-primary/50 transition-all duration-300 hover:scale-105 group">
               <div className="text-2xl mb-3">🎵</div>
               <h4 className="font-semibold mb-2">Music</h4>
               <p className="text-sm text-muted-foreground">Movies & Music</p>
             </div>
-            <div className="bg-card border border-border rounded-xl p-6 hover:border-primary/50 transition-all duration-300 hover:scale-105 group">
+            <div className="bg-card border font-mono border-border rounded-xl p-6 hover:border-primary/50 transition-all duration-300 hover:scale-105 group">
               <div className="text-2xl mb-3">🐕</div>
               <h4 className="font-semibold mb-2">Pet Lover</h4>
               <p className="text-sm text-muted-foreground">
@@ -159,7 +172,7 @@ const About = () => {
             </div>
           </div>
 
-          <div className="mt-12 bg-gradient-to-r from-primary/10 to-blue-500/10 border border-primary/20 rounded-2xl p-8 max-w-4xl mx-auto">
+          <div className="mt-12 font-mono bg-gradient-to-r from-primary/10 to-blue-500/10 border border-primary/20 rounded-2xl p-8 max-w-4xl mx-auto">
             <p className="text-lg text-muted-foreground leading-relaxed">
               "I'm always eager to learn, grow, and explore new technologies.
               Let's connect and build something amazing together! 🚀"
